@@ -16,5 +16,5 @@ These are password protected, and you will have been given this password in the 
   - [Part 2 of 3](https://vimeo.com/647298757)
   - [Part 3 of 3](https://vimeo.com/647290718)
 * [Session 2: 1pm to 3pm](https://vimeo.com/647359634)
-* Session 3: 4pm to 6pm
+* [Session 3: 4pm to 6pm](https://vimeo.com/647440684)
 
