@@ -110,9 +110,9 @@ svm_trained <- train(svm_learner, spamTask)
 
 # predictive performance --------------------------------------------------
 
-p <- predict(svm_trained, newdata = spam)
-calculateConfusionMatrix(p)
-calculateROCMeasures(p)
+p_linear <- predict(svm_trained, newdata = spam)
+calculateConfusionMatrix(p_linear)
+calculateROCMeasures(p_linear)
 
 # Cross validation
 
@@ -160,3 +160,14 @@ svm_learner_tuned_trained <- train(svm_learner_tuned, spamTask)
 
 p_tuned <- predict(svm_learner_tuned_trained, newdata = spam)
 calculateROCMeasures(p_tuned)
+calculateConfusionMatrix(p_tuned)
+
+
+svm_tuned_cv <- resample(learner = svm_learner_tuned,
+                         task = spamTask,
+                         resampling = kfold_cv,
+                         measures = list(ppv, tpr, fpr, fdr, f1, acc, mmce)
+)
+    
+
+svm_tuned_cv$aggr                     
